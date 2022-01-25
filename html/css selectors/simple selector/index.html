@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS selector</title>
+    <style>
+
+        /* universal selector */
+        *{
+            background-color: black;
+            color: aliceblue;
+        }
+
+        /* element selector  */
+        div{
+            color: rgb(147, 226, 115);
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            /* background-color: blanchedalmond; */
+        }
+
+        /* class selector */
+        .largetext{
+            font-size: 25px;
+        }
+
+        .textcolor{
+            color: rgb(238, 20, 202);
+        }
+
+        .largetext.textcolor{
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: rgb(14, 66, 45);
+        }
+
+        /* grouping selector */
+        a, h1, h3{
+            color: teal;
+        }
+
+        .hello{
+            color: rgb(56, 34, 7);
+        }
+
+        /* id  */
+        #unique{
+            color: rgb(80, 42, 218);
+        }
+    </style>
+
+</head>
+<body>
+    
+    <!-- element selector  -->
+    <div>
+    <h2>Element selector</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime voluptate nam illo repellendus harum totam sequi eligendi laboriosam aliquid, modi, natus ad atque reiciendis architecto optio dolorum facilis? Sequi, ducimus?</p>
+    </div>
+
+    <!-- class selector -->
+    <!-- <div> -->
+        <h2>Class selector</h2>
+        <p class="largetext textcolor">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias eius, velit harum impedit, quod quisquam, obcaecati ipsum totam quaerat blanditiis eaque minima neque exercitationem. Ex unde dolorum odit quaerat porro?</p>
+   
+        <p class="largetext">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit ex, corrupti dignissimos reprehenderit amet, tempore ea, eaque iusto sapiente aut ducimus placeat minima perferendis odio quaerat cum? Earum, impedit doloremque.</p>
+    
+        <p class="textcolor">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque saepe ipsam a natus facilis quidem reiciendis autem aliquam labore, quia iusto tempora consectetur voluptate, expedita optio maxime aliquid quo rerum.</p>
+    <!-- </div> -->
+
+    <!-- Grouping selector  -->
+    <!-- <div> -->
+        <h1>Grouping selector</h1>
+        <h3>Grouping selector</h3>
+        <a href="blank">Grouping selector</a>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia quo fugiat minus quibusdam eius similique eaque ducimus. Culpa, quaerat dolor, quos aut provident impedit in consectetur cum vel inventore officiis.</p>
+    <!-- </div> -->
+
+    <!-- ID selector -->
+    <!-- <div> -->
+        <h1>ID selector</h1>
+        <p id="unique">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, laboriosam voluptates nostrum doloremque tempora fugit voluptatum obcaecati sapiente! Qui in aliquid iure iusto autem repellat necessitatibus iste adipisci similique debitis.
+        </p>
+    <!-- </div> -->
+    </body>
+</html>
