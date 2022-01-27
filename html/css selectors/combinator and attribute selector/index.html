@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinator selector</title>
+    <style>
+        *{
+            background-color: black;
+        }
+
+        /* descendant selector */
+        div p span{
+            color: brown;
+        }
+
+        /* children selector */
+        div>p>span{
+            color: aqua;
+        }
+
+        /* Attribute selector */
+        a[href="https://google.com"]{
+            color: blueviolet;
+        }
+
+        a[href="https://netflix.com"]{
+            color: red;
+        }
+
+        a[href="https://instagram.com"]{
+            color: rgb(250, 9, 170);
+        }
+
+        p[class="attribute-selector"]{
+            color: springgreen;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        /* a[target="_blank"]{
+            color: yellow;
+        } */
+
+        
+    </style>
+</head>
+<body>
+
+    <!-- combinator selector -->
+
+    <!-- descendant selector -->
+    <div>
+        <p>
+            <span>I am direct child.</span>
+        </p>
+    </div>
+
+    <!-- children selector -->
+    <div>
+        <span>
+            <p>
+                <span>I am an indirect child. </span>
+            </p>
+        </span>
+    </div>
+
+    <!-- Attribute selector -->
+    <a href="https://google.com" target="_blank">Google</a>
+    <a href="https://instagram.com" target="_blank">instagram</a>
+    <a href="https://netflix.com" target="_blank">Netflix</a>
+
+    <p class="attribute-selector">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, cumque.</p>
+    
+    
+
+</body>
+</html>
