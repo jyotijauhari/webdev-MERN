@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Units</title>
+    <style>
+
+        .box{
+            margin: 20px;
+            border: 1px solid black;
+            background-color: violet;
+        }
+
+        .parent {
+            font-size: 10px;
+        }
+
+        .px{
+            width: 10px;
+        }
+
+        /* root element = 16px by default
+        so for 10 rem = 10*rem = 10*16 = 160px  */
+        .rem{
+            width: 10rem;
+        }
+
+        /* parent size = 10px, (parent class here) 
+        so for 10em = 10*10 = 100px */
+        .em{
+            width: 10em;
+        }
+        .vw{
+            width: 10vw;
+        }
+        .vh{
+            height: 10vh;
+        }
+
+        /* rem vs em */
+        /* acc to root element = 1.5rem = 1.5*16 = 24px  */
+        .rems li{
+            font-size: 1.5rem;
+        }
+
+        .ems li{
+            font-size: 1.5em;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="main">
+        <div class="box px">box</div>
+        <div class="parent">
+            <div class="box rem">box</div>
+            <div class="box em">box</div>
+        </div>
+        
+        <div class="box vw">box</div>
+        <div class="box vh">box</div>
+    </div>
+
+    <!-- rem vs em -->
+    <div>
+        <ul class="rems">
+            <!-- acc to root so 1.5rem = 1.5*16 = 24px -->
+            <li>1 One</li>
+            <li>2 Two</li>
+            <li>3 Three
+                <ul>
+                    <li>3 a One</li>
+                    <li>3 b One
+                        <ul>
+                            <li>3 b 1</li>
+                            <li>3 b 2</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <ul class="ems">
+            <!-- acc to parent element = 1.5em = 1.5*16 = 24px   -->
+            <li>1 One</li>
+            <li>2 Two</li>
+            <li>3 Three
+                <!-- acc to parent element = 1.5em = 1.5*24 = 36px   -->
+                <ul>
+                    <li>3 a One</li>
+                    <li>3 b One
+                        <!-- acc to parent element = 1.5em = 1.5*36 = 54px   -->
+                        <ul>
+                            <li>3 b 1</li>
+                            <li>3 b 2</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    
+</body>
+</html>
