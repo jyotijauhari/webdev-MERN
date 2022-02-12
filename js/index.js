@@ -79,3 +79,28 @@ for(var i=1; i<=10; i++){
 const m = 5;
 // m = 6;  // TypeError: Assignment to constant variable.
 // const m = 8 //Identifier 'm' has already been declared
+
+
+
+// let and var scope
+
+for(var i=1; i<=10; i++){
+    if(i%2==0){
+        console.log("num is even");
+    }
+    else{
+        console.log("num is odd");
+    }
+}
+console.log("value of i of var type is: "+i);
+
+for(let k=1; k<=10; k++){
+    if(k%2==0){
+        console.log("num is even");
+    }
+    else{
+        console.log("num is odd");
+    }
+}
+let k = 5;
+console.log("value of k of let is: "+k);
