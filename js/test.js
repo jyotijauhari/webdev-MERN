@@ -283,8 +283,8 @@ const colorConfig = {
 };
 
 const colors = ['pink', 'red', 'blue'];
-
-console.log(colorConfig.red);
+//left to right execute
+console.log(colorConfig.colors[1]);
 A: true
 B: false
 C: undefined
