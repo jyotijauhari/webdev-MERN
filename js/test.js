@@ -1,16 +1,16 @@
 // < --------------Question 1----------------->
-    
 let randomValue = { name: "Lydia" };
 randomValue = 23;
 
 if (!typeof randomValue === "string") {
   console.log("It's not a string!");
-} else {
+}
+ else {
   console.log("Yay it's a string!");
 }
 
 A: It's not a string!
-B: Yay it's a string!
+B: Yay it's a string! -> Ans
 C: TypeError
 D: undefined
 
@@ -48,7 +48,7 @@ D: ['🍇', '🍌', '🍊', '🍎']
 // < --------------Question 4----------------->
 
 let count = 0;
-const nums = [0, 1, 2, 3];
+const nums = [0, 1, 2, 3]; 
 
 for(var i in nums){
 	if (i) count += 1
@@ -56,7 +56,13 @@ for(var i in nums){
 
 console.log(count)
 
+A: 1
+B: 2
+C: 3
+D: 4
+
 // < --------------Question 5----------------->
+Which of the options result(s) in an error?
 
 const emojis = ['🎄', '🎅🏼', '🎁', '⭐'];
 
@@ -64,10 +70,11 @@ const emojis = ['🎄', '🎅🏼', '🎁', '⭐'];
 /* 2 */ emojis.splice(0, 2);
 /* 3 */ emojis = [...emojis, '🥂'];
 /* 4 */ emojis.length = 0;
+
 A: 1
 B: 1 and 2
 C: 3 and 4
-D: 3
+D: 3 
 
 // < --------------Question 6----------------->
 // for this ques read this https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters
@@ -89,7 +96,10 @@ C: 2 Error and 3 6
 D: 2 4 and 3 Error
 
 // < --------------Question 7----------------->
+137
 // for this question google what Object.freeze does 
+
+Which of the following will modify the person object?
 const person = {
   name: 'Lydia Hallie',
   address: {
@@ -99,11 +109,19 @@ const person = {
 
 Object.freeze(person);
 
+A: person.name = "Suresh"
+B: delete person.address
+C: person.address.street = "101 Main St" 
+D: person.pet = { name: "Mara" }
+
 // < --------------Question 8----------------->
+136
 // for this question google what Object.seal does 
+Which of the following will modify the person object?
 const person = { name: 'Lydia Hallie' };
 
 Object.seal(person);
+
 A: person.name = "Evan Bacon"
 B: person.age = 21
 C: delete person.name
@@ -121,11 +139,12 @@ D: ['🥑', '✨', '✨', '🍕', '🍕']
 
 // < --------------Question 10----------------->
 
-const randomValue = 21;
+var randomValue = 21;
 
 function getInfo() {
   console.log(typeof randomValue);
   var randomValue = 'Lydia Hallie';
+  lo
 }
 
 getInfo();
@@ -172,6 +191,7 @@ D: 1
 
 // < --------------Question 13----------------->
 // read:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining
+
 const person = {
   firstName: 'Lydia',
   lastName: 'Hallie',
@@ -212,18 +232,20 @@ function sumValues(x, y, z) {
 }
 A: sumValues([...1, 2, 3])
 B: sumValues([...[1, 2, 3]])
-C: sumValues(...[1, 2, 3])
+C: sumValues(...[1, 2, 3]) 
 D: sumValues([1, 2, 3])
 
 // < --------------Question 16----------------->
-// revise default paramters and spred operator 
+// revise default paramters and spread operator 
 const person = {
   name: 'Lydia',
   age: 21,
 };
 
-const changeAge = (x = { ...person }) => (x.age += 1);
-const changeAgeAndName = (x = { ...person }) => {
+const changeAge = function (x = { ...person }) {
+  x.age += 1;
+}
+const changeAgeAndName = function (x = { ...person }) {
   x.age += 1;
   x.name = 'Sarah';
 };
@@ -262,7 +284,7 @@ const colorConfig = {
 
 const colors = ['pink', 'red', 'blue'];
 
-console.log(colorConfig.colors[1]);
+console.log(colorConfig.red);
 A: true
 B: false
 C: undefined
@@ -279,6 +301,11 @@ function nums(a, b) {
 
 console.log(nums(4, 2));
 console.log(nums(1, 2));
+
+A: a is bigger, 6 and b is bigger, 3
+B: a is bigger, undefined and b is bigger, undefined
+C: undefined and undefined
+D: SyntaxError
 
 // < --------------Question 20----------------->
 // read: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries
@@ -338,7 +365,7 @@ const person = {
   age: 21,
 };
 
-let city = person.city;
+let city = person.city; //undefined
 city = 'Amsterdam';
 
 console.log(person);
@@ -393,7 +420,7 @@ C: [1, 2, 3, 7 x empty, 11]
 D: SyntaxError
 
 // < --------------Question 29----------------->
-
+33
 const person = { name: 'Lydia' };
 
 function sayHi(age) {
@@ -422,5 +449,5 @@ D: ReferenceError
 /*doubts ->> 
 
 // 16
-// 27
+// 20
 // 29
