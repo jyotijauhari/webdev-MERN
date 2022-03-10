@@ -11,6 +11,7 @@
 
 - NodeJs doc -> File system module -> https://nodejs.org/dist/latest-v16.x/docs/api/fs.html#synchronous-api
 
+- linux commands (wcat) : https://www.tecmint.com/13-basic-cat-command-examples-in-linux/
 
 ### Notes
 
