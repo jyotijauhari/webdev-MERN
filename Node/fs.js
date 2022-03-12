@@ -1,4 +1,4 @@
-// fs -> file system module -> it helps us to make files/folder append data in them, delete data, read data 
+// // fs -> file system module -> it helps us to make files/folder append data in them, delete data, read data 
 const fs = require("fs")
 
 console.log(fs); // op -> what is inside fs -> 
@@ -37,6 +37,6 @@ console.log(data1)
 const obj = require("../js/temp") 
 console.log(obj); // pura object print hoga 
 
-let ans = obj.name; 
-console.log(ans); //jyoti
-console.log(obj.add(5,4)); //9
+// let ans = obj.name; 
+// console.log(ans); //jyoti
+// console.log(obj.add(5,4)); //9
