@@ -1,7 +1,9 @@
 //entry point of my command line
 let helpFunc = require("./commands/help")
 
-const fs = require("fs");
+let orgFunc = require("./commands/organize");
+
+// const fs = require("fs");
 
 
 //node main.js organize folder-path
@@ -9,13 +11,16 @@ let inputArr = process.argv.slice(2); //[organize, folder-path]
 
 let command = inputArr[0];
 
+let path = inputArr[1];
+
 switch(command){
     case "tree":
-        // console.log("tree");
+        console.log("tree");
         break;
     
     case "organize":
-        // console.log("organise");
+        // console.log("organize");
+        orgFunc.organize(path);
         break;
 
     case "help":

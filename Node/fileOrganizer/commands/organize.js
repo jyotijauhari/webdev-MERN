@@ -40,7 +40,7 @@ function organize(srcPath){
         //1. check if it is a file or folder
         //lstatsync gives the information regarding the link provided ,
         let isFile = fs.lstatSync(fullPathOfFile).isFile(); //true->if isFile   
-        console.log(allFiles[i]+" is "+ isFile);
+        // console.log(allFiles[i]+" is "+ isFile); -> f1.txt is true, organized_files is false
         if (isFile) {
           //1.1 get ext name (zip of .zip)
           let ext = path.extname(allFiles[i]).split(".")[1];
@@ -64,6 +64,9 @@ function getFolderName(ext) {
             }
         }
     }
+
+    //edge case -> no types matched
+    return "miscellaneous";
   }
   
   function copyFileToDest(srcPath, fullPathOfFile, folderName) {
@@ -89,5 +92,9 @@ function getFolderName(ext) {
     //magic
   }
 
-let srcPath = "D:\\Programming\\FJP-webdev\\Node\\fileOrganizer\\downloads"; // double slash windows problm :(
-organize(srcPath);
+// let srcPath = "D:\\Programming\\FJP-webdev\\Node\\fileOrganizer\\downloads"; // double slash windows problm :(
+// organize(srcPath);
+
+module.exports = {
+    organize:organize
+  }
