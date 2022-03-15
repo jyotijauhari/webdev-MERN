@@ -57,13 +57,37 @@ function organize(srcPath){
 function getFolderName(ext) {
   
     //magic 
-    return folderName;
+    for(let key in types){
+        for(let i=0; i<types[key].length; i++){
+            if(types[key][i] == ext){
+                return key;
+            }
+        }
+    }
   }
   
   function copyFileToDest(srcPath, fullPathOfFile, folderName) {
-    
+    // Goal: fs.copyFileSync(src, dest);
+
+    let src = fullPathOfFile;
+
+    //1. make destination folderName path
+    let destFolderPath = path.join(srcPath, "organized_files", folderName); //....../downloads/organized_files/archives
+    // console.log(des);
+
+    //2 check folder if exists, if it does not, then make folder
+    if (!fs.existsSync(destFolderPath)) {
+      fs.mkdirSync(destFolderPath);
+    }
+
+    //3. copy file from src folder to dest folder
+    // Returns the last portion of a path
+    let base = path.basename(fullPathOfFile); //abc.zip
+    let dest = path.join(destFolderPath, base); //Users/.../downloads/organized_files/archives/abc.zip
+
+    fs.copyFileSync(src, dest);
     //magic
   }
 
-let srcPath = "D:\\Programming\\FJP-webdev\\Node\\fileOrganizer\\downloads";
+let srcPath = "D:\\Programming\\FJP-webdev\\Node\\fileOrganizer\\downloads"; // double slash windows problm :(
 organize(srcPath);
