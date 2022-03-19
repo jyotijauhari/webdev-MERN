@@ -33,5 +33,5 @@ function treeHelper(srcPath, spacing){
 //   }
 
 // let srcPath = "D:\\Programming\\FJP-webdev\\Node\\fileOrganizer\\downloads"; // double slash windows problm
-let srcPath = "D:\\Programming\\FJP-webdev\\Node"; 
-tree(srcPath);
+// let srcPath = "D:\\Programming\\FJP-webdev\\Node"; 
+// tree(srcPath);

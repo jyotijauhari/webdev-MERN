@@ -22,7 +22,7 @@ switch(command){
         break;
     
     case "organize":
-        // console.log("organize");
+        console.log("organize");
         orgFunc.organize(path);
         break;
 
