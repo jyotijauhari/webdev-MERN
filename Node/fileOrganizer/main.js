@@ -1,7 +1,9 @@
 //entry point of my command line
-let helpFunc = require("./commands/help")
+let helpFunc = require("./commands/help");
 
 let orgFunc = require("./commands/organize");
+
+let treeFunc = require("./commands/tree");
 
 // const fs = require("fs");
 
@@ -15,7 +17,8 @@ let path = inputArr[1];
 
 switch(command){
     case "tree":
-        console.log("tree");
+        treeFunc.tree(path);
+        // console.log("tree");
         break;
     
     case "organize":
