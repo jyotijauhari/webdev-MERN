@@ -13,6 +13,8 @@
 
 - linux commands (wcat) : https://www.tecmint.com/13-basic-cat-command-examples-in-linux/
 
+- Making node file global : https://medium.com/jspoint/creating-cli-executable-global-npm-module-5ef734febe32
+
 ### Notes
 
 - margin : top right bottom left
