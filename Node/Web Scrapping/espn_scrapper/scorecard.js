@@ -53,9 +53,9 @@ function getMatchDetails(html){
     console.log(team2);
 
     //5. get innings 
-
-    let allBatsmenRows = selecTool(".table.batsman tbody");
-    console.log(allBatsmenRows.text());
+    console.log("Innings: ")
+    let allBatsmenTable = selecTool(".table.batsman tbody");
+    // console.log(allBatsmenRows.text());
     //got two tables of both team batsman now
     // Are there any other method like .text() , .html(), .find(), .hasClass() that are commonly used with selecTool? 
 
@@ -83,7 +83,7 @@ function getMatchDetails(html){
                 //     console.log(selecTool(row.find("td")[i]).text());
                 //   }
                 // }
-                let playerName = selecTool(row.find("td")[0]);
+                let playerName = selecTool(row.find("td")[0]).text();
                 // console.log(playerName);
                 let runs = selecTool(row.find("td")[2]).text();
                 let balls = selecTool(row.find("td")[3]).text();
@@ -91,14 +91,19 @@ function getMatchDetails(html){
                 let numberOf6 = selecTool(row.find("td")[6]).text();
                 let sr = selecTool(row.find("td")[7]).text();
                 
+                // console.log(
+                //     `playerName -> ${playerName} runsScored ->  ${runs} ballsPlayed ->  ${balls} numbOfFours -> ${numberOf4} numbOfSixes -> ${numberOf6}  strikeRate-> ${sr}`
+                //   );
+
                 console.log(
-                    `playerName -> ${playerName} runsScored ->  ${runs} ballsPlayed ->  ${balls} numbOfFours -> ${numberOf4} numbOfSixes -> ${numberOf6}  strikeRate-> ${sr}`
+                    `${playerName} ->  ${runs} ->  ${balls} -> ${numberOf4} -> ${numberOf6} -> ${sr}`
                   );
 
             }
         }
     
     }
+    // console.log(htmlString); -> for getting innings html
 }
 
 
