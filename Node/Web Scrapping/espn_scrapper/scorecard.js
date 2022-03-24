@@ -44,6 +44,18 @@ function getMatchDetails(html){
 
     //   4. get team names
     //   a[class = "name-link"] for getting team name -> attribute selector 
+    // selectTool(".name-detail>.name-link")
+    let teamNames = selecTool(".name-detail>.name-link");
+    // console.log(teamNames.text());
+    let team1 = selecTool(teamNames[0]).text();
+    console.log(team1);
+    let team2 = selecTool(teamNames[1]).text();
+    console.log(team2);
+
+    //5. get innings 
+
+    let allBatsmenRows = selecTool(".table.batsman tbody>tr");
+    console.log(allBatsmenRows.text());
 
     
 }
