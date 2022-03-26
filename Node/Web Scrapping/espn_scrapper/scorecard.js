@@ -1,9 +1,12 @@
 const request = require("request");
 const cheerio = require("cheerio");
+const fs = require("fs");
+const path = require("path");
+const xlsx = require("xlsx");
 
 function getInfoFromScorecard(url) {
 //   https://www.espncricinfo.com/series/ipl-2020-21-1210595/delhi-capitals-vs-mumbai-indians-final-1237181/full-scorecard
-  console.log("from scorecards.js ",url);
+//   console.log("from scorecards.js ",url);
   request(url, cb);
 }
 
@@ -40,7 +43,9 @@ function getMatchDetails(html){
     //3. get result
     //class selector, children selector
     let matchResEle = selecTool( ".match-info.match-info-MATCH.match-info-MATCH-half-width>.status-text");
-    console.log(matchResEle.text());
+    // console.log(matchResEle.text());
+    let matchResult = matchResEle.text();;
+    console.log(matchResult);
 
     //   4. get team names
     //   a[class = "name-link"] for getting team name -> attribute selector 
@@ -99,12 +104,59 @@ function getMatchDetails(html){
                     `${playerName} ->  ${runs} ->  ${balls} -> ${numberOf4} -> ${numberOf6} -> ${sr}`
                   );
 
+                  processInformation(dateOfMatch, venueOfMatch, matchResult, team1, team2, playerName, runs, balls, numberOf4, numberOf6, sr);
+
             }
         }
     
     }
     // console.log(htmlString); -> for getting innings html
 }
+
+function processInformation(dateOfMatch, venueOfMatch, matchResult, team1, team2, playerName, runs, balls, numberOf4, numberOf6, sr){
+    let teamNamePath = path.join(__dirname, "IPL", team1);
+    if (!fs.existsSync(teamNamePath)) {
+        fs.mkdirSync(teamNamePath);
+      }
+
+    let playerPath = path.join(teamNamePath, playerName + ".xlsx");
+    let content = excelReader(playerPath, playerName);
+
+    let playerObj = {
+        dateOfMatch,
+        venueOfMatch,
+        matchResult,
+        team1,
+        team2,
+        playerName,
+        runs,
+        balls,
+        numberOf4,
+        numberOf6,
+        sr
+      };
+
+    content.push(playerObj);
+    excelWriter(playerPath, content, playerName);
+  
+    }  
+
+function excelReader(playerPath, playerName) {
+  if (!fs.existsSync(playerPath)) {
+    fs.mkdirSync(playerPath);//**********
+  }
+}
+
+function excelWriter(playerPath, jsObject, sheetName) {
+    //Creates a new workbook
+    let newWorkBook = xlsx.utils.book_new();
+    //Converts an array of JS objects to a worksheet.
+    let newWorkSheet = xlsx.utils.json_to_sheet(jsObject);
+    //it appends a worksheet to a workbook
+    xlsx.utils.book_append_sheet(newWorkBook, newWorkSheet, sheetName);
+    // Attempts to write or download workbook data to file
+    xlsx.writeFile(newWorkBook, playerPath);
+  }
 
 
 module.exports = {

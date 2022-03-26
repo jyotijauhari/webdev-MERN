@@ -1,5 +1,7 @@
 let url = "https://www.espncricinfo.com/series/ipl-2020-21-1210595";
 
+const fs = require("fs");
+const path = require("path");
 const request = require("request");
 const cheerio = require("cheerio");
 const allMatchObj = require("./allMatch");
@@ -14,6 +16,13 @@ function cb(err, res, body) {
         handleHtml(body);
     }
 }
+
+//getting curr directory path
+let iplPath = path.join(__dirname, "IPL");
+if (!fs.existsSync(iplPath)) {
+    fs.mkdirSync(iplPath);
+}
+
 
 function handleHtml(html) {
     

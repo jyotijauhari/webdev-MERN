@@ -27,7 +27,7 @@ function extractAllMatchLink(html){
         let fullLink = "https://www.espncricinfo.com" + scorecardLink;
         // console.log(fullLink)
         gifs(fullLink);
-        break; // to make call for 1st link only
+        // break; // to make call for 1st link only
 
     }
 }
