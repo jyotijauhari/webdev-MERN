@@ -1,0 +1,1 @@
+install puppeteer yourself (node modules are being added to .gitignore so they are not pushed)
