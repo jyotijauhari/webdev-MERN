@@ -1,7 +1,8 @@
 const puppeteer = require("puppeteer");
+const credentials = require("./credentials");
 
-let email = "";
-let password = "";
+let email = credentials.email;
+let password = credentials.password;
 
 let currentTab;
 let browserOpenPromise = puppeteer.launch({
