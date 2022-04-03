@@ -30,7 +30,7 @@ function organize(srcPath){
     let allFiles = fs.readdirSync(srcPath);
     console.log(allFiles);
 
-    //step 4: traverse all files and classify them on basic of their extension
+    //step 4: traverse all files and classify them on basis of their extension
     
     for (let i = 0; i < allFiles.length; i++){
         // let ext = allFiles[i].;
@@ -43,7 +43,7 @@ function organize(srcPath){
         // console.log(allFiles[i]+" is "+ isFile); -> f1.txt is true, organized_files is false
         if (isFile) {
           //1.1 get ext name (zip of .zip)
-          let ext = path.extname(allFiles[i]).split(".")[1];
+          let ext = path.extname(allFiles[i]).split(".")[1]; // extname gives .zip // this alone also works - allFiles[i].split(".")[1];
           // console.log(ext);
           //1.2 get folder name from extension
           let folderName = getFolderName(ext); //archives 
