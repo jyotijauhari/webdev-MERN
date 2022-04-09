@@ -1,6 +1,8 @@
 const puppeteer = require("puppeteer");
 const credentials = require("./credentials");
 
+let {answer} = require("./codes");
+
 let email = credentials.email;
 let password = credentials.password;
 
@@ -8,7 +10,7 @@ let password = credentials.password;
 let cTab;
 let browserOpenPromise = puppeteer.launch({
     headless: false,
-    defaultViewport: null,
+    defaultViewport: null, //deprecated
     args: ["--start-maximized"]  
 });
 
@@ -77,14 +79,20 @@ browserOpenPromise
         console.log("links to all ques received: ");
         // console.log(linksArr);
 
-        //now solving que
-        let questionsWillBeSolvedPromise = questionSolver(linksArr[0], 0);
+        //now solving question 1
+        let questionsWillBeSolvedPromise = questionSolver(linksArr[1], 1);
+
+        //solving all question
+        for (let i = 2; i < linksArr.length; i++){
+            questionsWillBeSolvedPromise = questionsWillBeSolvedPromise.then(function () {
+              return questionSolver(linksArr[i], i);
+            })
+          }
         return questionsWillBeSolvedPromise;
     })
     .then(function(){
         console.log("Tada questiion is solved.");
     })
-
     .catch(function(err){
         console.log(err);
     });
@@ -155,7 +163,7 @@ function questionSolver(url, idx){
               return 0;
             }`;
 
-            let codeWillBeTypedPromise = cTab.type( ".custominput" ,code1);
+            let codeWillBeTypedPromise = cTab.type( ".custominput" ,answer[idx]);
             return codeWillBeTypedPromise;
         })
         .then(function(){
