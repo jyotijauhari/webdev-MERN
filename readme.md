@@ -8,6 +8,7 @@
 - NodeJs doc -> File system module -> https://nodejs.org/dist/latest-v16.x/docs/api/fs.html#synchronous-api
 - linux commands (wcat) : https://www.tecmint.com/13-basic-cat-command-examples-in-linux/
 - Making node file global : https://medium.com/jspoint/creating-cli-executable-global-npm-module-5ef734febe32
+- Resume keywords - https://hls.harvard.edu/dept/opia/job-search-toolkit/action-verbs/
 
 ### Notes
 

@@ -80,10 +80,10 @@ browserOpenPromise
         // console.log(linksArr);
 
         //now solving question 1
-        let questionsWillBeSolvedPromise = questionSolver(linksArr[1], 1);
+        let questionsWillBeSolvedPromise = questionSolver(linksArr[0], 0);
 
         //solving all question
-        for (let i = 2; i < linksArr.length; i++){
+        for (let i = 1; i < linksArr.length; i++){
             questionsWillBeSolvedPromise = questionsWillBeSolvedPromise.then(function () {
               return questionSolver(linksArr[i], i);
             })
