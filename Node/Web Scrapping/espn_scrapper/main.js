@@ -34,7 +34,7 @@ function handleHtml(html) {
     let relativeLink = anchorElem.attr("href");
     // console.log(relativeLink);
     let fullLink = "https://www.espncricinfo.com" + relativeLink;
-    console.log(fullLink);
+    // console.log(fullLink);
     
     allMatchObj.getAllMatch(fullLink);
 }
