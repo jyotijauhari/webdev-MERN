@@ -23,6 +23,7 @@ function cb(err,res,body) {
 function getMatchDetails(html){
   // selectool contains html of ith scorecrad
   let selecTool = cheerio.load(html);
+//   console.log(selecTool);
 
 //   task: 
 // 1 get venue
@@ -32,7 +33,8 @@ function getMatchDetails(html){
 
     //1. get venue
     //2. get date
-    let desc = selecTool(".match-header-info.match-info-MATCH");
+    // let desc = selecTool(".match-header-info.match-info-MATCH"); ->deprecated as website structure changed
+    let desc = selecTool(".ds-text-tight-m.ds-font-regular.ds-text-ui-typo-mid");
     // console.log(desc.text());
     let descArr = desc.text().split(",");
     //Match (N), Abu Dhabi, Oct 25 2020, Indian Premier League

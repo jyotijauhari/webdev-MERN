@@ -33,8 +33,8 @@ function extractAllMatchLink(html){
         // console.log(i + 1 + ") " + scorecardLink);
         let fullLink = "https://www.espncricinfo.com" + scorecardLink;
         // console.log(fullLink)
-        // gifs(fullLink);
-        // break; // to make call for 1st link only
+        gifs(fullLink);
+        break; // to make call for 1st link only
 
     }
 }
