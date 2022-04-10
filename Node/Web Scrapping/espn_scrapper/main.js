@@ -27,13 +27,14 @@ if (!fs.existsSync(iplPath)) {
 function handleHtml(html) {
     
     let selecTool = cheerio.load(html);
-    let anchorElem = selecTool('a[data-hover="View All Results"]');
+    // let anchorElem = selecTool('a[data-hover="View All Results"]');
+    let anchorElem = selecTool('span[class = "ds-inline-flex ds-items-center ds-leading-none"]>a[class="ds-block ds-text-center ds-uppercase ds-text-ui-typo-primary ds-underline-offset-4 hover:ds-underline hover:ds-decoration-ui-stroke-primary ds-block"]')
     // console.log(anchorElem);
     // attr methods -> method for getting all attributes and their values
     let relativeLink = anchorElem.attr("href");
     // console.log(relativeLink);
     let fullLink = "https://www.espncricinfo.com" + relativeLink;
-    // console.log(fullLink);
+    console.log(fullLink);
     
     allMatchObj.getAllMatch(fullLink);
 }
