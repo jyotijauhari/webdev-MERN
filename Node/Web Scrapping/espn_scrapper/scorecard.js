@@ -4,6 +4,7 @@ const fs = require("fs");
 const path = require("path");
 //first install using -> npm i xlsx
 const xlsx = require("xlsx");
+const { log } = require("console");
 
 function getInfoFromScorecard(url) {
 //   https://www.espncricinfo.com/series/ipl-2020-21-1210595/delhi-capitals-vs-mumbai-indians-final-1237181/full-scorecard
@@ -45,7 +46,8 @@ function getMatchDetails(html){
     console.log(venueOfMatch);
     //3. get result
     //class selector, children selector
-    let matchResEle = selecTool( ".match-info.match-info-MATCH.match-info-MATCH-half-width>.status-text");
+    // let matchResEle = selecTool( ".match-info.match-info-MATCH.match-info-MATCH-half-width>.status-text");
+    let matchResEle = selecTool( ".ds-text-tight-m.ds-font-regular.ds-truncate");
     // console.log(matchResEle.text());
     let matchResult = matchResEle.text();;
     console.log(matchResult);
@@ -53,8 +55,9 @@ function getMatchDetails(html){
     //   4. get team names
     //   a[class = "name-link"] for getting team name -> attribute selector 
     // selectTool(".name-detail>.name-link")
-    let teamNameArr = selecTool(".name-detail>.name-link");
-    // console.log(teamNames.text());
+    // let teamNameArr = selecTool(".name-detail>.name-link");
+    let teamNameArr = selecTool('a[class="ds-text-ui-typo hover:ds-text-ui-typo-primary ds-block"]');
+    // console.log(teamNameArr.text());
     let ownTeam = selecTool(teamNameArr[0]).text();
     let opponentTeam = selecTool(teamNameArr[1]).text();
     console.log(ownTeam);
@@ -62,8 +65,11 @@ function getMatchDetails(html){
 
     //5. get innings 
     console.log("Innings: ")
-    let allBatsmenTable = selecTool(".table.batsman tbody");
-    // console.log(allBatsmenRows.text());
+    // let allBatsmenTable = selecTool(".table.batsman tbody");
+    let allBatsmenTable = selecTool(".ds-w-full.ds-table.ds-table-xs.ds-table-fixed.ci-scorecard-table > tbody");
+    // console.log(allBatsmenTable.html());
+    // console.log(allBatsmenTable.length); // 2
+    
     //got two tables of both team batsman now
     // Are there any other method like .text() , .html(), .find(), .hasClass() that are commonly used with selecTool? 
 
@@ -113,7 +119,7 @@ function getMatchDetails(html){
         }
     
     }
-    // console.log(htmlString); -> for getting innings html
+    // console.log(htmlString); //-> for getting innings html
 }
 
 function processInformation(dateOfMatch, venueOfMatch, matchResult, ownTeam, opponentTeam, playerName, runs, balls, numberOf4, numberOf6, sr){
