@@ -1,12 +1,12 @@
 //print 1 to 10 , each after 2 sec
 // this will print from 1 to 10 with interval of 2sec
-for(let i=0; i<=10; i++){
-    setTimeout(
-        function () {
-            console.log(i);
-        }
-    ,2000*i);
-}
+// for(let i=0; i<=10; i++){
+//     setTimeout(
+//         function () {
+//             console.log(i);
+//         }
+//     ,2000*i);
+// }
 
 //challenge : for loop and using var print 1-10 with interval of 2sec
 
@@ -36,3 +36,14 @@ for(let i=0; i<=10; i++){
 // }
 
 
+for(var i=0; i<=10; i++){
+    print(i);
+}
+
+function print(i){
+    setTimeout(
+        function (){
+            console.log(i);
+        }
+        ,2000*i);
+}
