@@ -1,3 +1,4 @@
+//its deprecated -> here for refernce of concepts -> new scorecard.js is tp.js
 const request = require("request");
 const cheerio = require("cheerio");
 const fs = require("fs");
@@ -86,6 +87,7 @@ function getMatchDetails(html){
             let firstColmnOfRow = row.find("td")[0]; //first td of tr
 
             //-> as we have two td , one with batsman-cell class and (other usme nahi hai) (and in the other td that doesn't have batsman-cell has no data -> and we dont want that td so ->)
+            //ds-text-tight-s
             if (selecTool(firstColmnOfRow).hasClass("batsman-cell")) {
                 //will be getting valid data
                 // count++;
