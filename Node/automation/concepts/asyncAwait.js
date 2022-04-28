@@ -82,3 +82,79 @@ console.log("yeahh");  //it wont wait for await as its not in function which con
  * hello  //after 5sec
  * done alert //eaxctly after hello printed
  */
+
+
+// Day 35
+
+
+//fetch - async/await
+//run in browser because of fetch thing :)
+async function showAvatar() {
+
+  // read our JSON
+  let response = await fetch("https://javascript.info/article/promise-chaining/user.json");
+  console.log(response); 
+  /*Response {type: 'cors', url: 'https://javascript.info/article/promise-chaining/user.json', redirected: false, status: 200, ok: true, …}
+  body: (...)
+  bodyUsed: true
+  headers: Headers {}
+  ok: true
+  redirected: false
+  status: 200
+  statusText: ""
+  type: "cors"
+  url: "https://javascript.info/article/promise-chaining/user.json"
+  [[Prototype]]: Response*/
+
+
+  let user = await response.json();
+  console.log(user);
+  /**
+{name: 'iliakan', isAdmin: true}
+isAdmin: true
+name: "iliakan"
+[[Prototype]]: Object
+   */
+
+  // read github user
+  let githubResponse = await fetch(`https://api.github.com/users/${user.name}`);
+  let githubUser = await githubResponse.json();
+
+  // show the avatar
+  let img = document.createElement('img');
+  img.src = githubUser.avatar_url;
+  img.className = "promise-avatar-example";
+  document.body.append(img);
+
+  // wait 3 seconds
+  await new Promise((resolve, reject) => setTimeout(resolve, 3000));
+
+  img.remove();
+
+  return githubUser;
+}
+
+showAvatar();
+
+
+// Try catch finally -> exception handling
+try{
+  console.log("in try");
+}
+catch(e){
+  console.log(e);
+}
+finally{
+  console.log("I am always executed");
+}
+
+
+try{
+  throw new Error("Error! gadbad ho gayi");
+}
+catch(e){
+  console.log(e);
+}
+finally{
+  console.log("finally u r here in finally");
+}
