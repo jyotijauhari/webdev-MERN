@@ -9,7 +9,7 @@
 - linux commands (wcat) : https://www.tecmint.com/13-basic-cat-command-examples-in-linux/
 - Making node file global : https://medium.com/jspoint/creating-cli-executable-global-npm-module-5ef734febe32
 - Resume keywords - https://hls.harvard.edu/dept/opia/job-search-toolkit/action-verbs/
-
+- async/await - https://javascript.info/async-await
 ### Notes
 
 - margin : top right bottom left
