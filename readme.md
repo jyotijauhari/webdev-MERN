@@ -12,7 +12,8 @@
 - async/await - https://javascript.info/async-await
 - js async vs sync : https://www.freecodecamp.org/news/synchronous-vs-asynchronous-in-javascript/
 - DOM js : https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
-### Notes
 
+### Notes for webdev mern
 - margin : top right bottom left
 - Getting chrome executable path: type -> chrome://version/ -> in chrome (for puppeteer)
+
