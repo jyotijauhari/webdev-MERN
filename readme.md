@@ -13,6 +13,8 @@
 - js async vs sync : https://www.freecodecamp.org/news/synchronous-vs-asynchronous-in-javascript/
 - DOM js : https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
 - CSS box sizing : https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
+- css position : https://www.freecodecamp.org/news/css-position-property-explained/
+
 
 ### Notes for webdev mern
 - margin : top right bottom left
