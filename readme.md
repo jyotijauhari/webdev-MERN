@@ -14,9 +14,11 @@
 - DOM js : https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
 - CSS box sizing : https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
 - css position : https://www.freecodecamp.org/news/css-position-property-explained/
-
+- localstorage : https://javascript.info/localstorage
+- json - https://www.freecodecamp.org/news/json-stringify-example-how-to-parse-a-json-object-with-javascript/
+- higher order fun :  https://javascript.plainenglish.io/functional-programming-higher-order-function-hof-aaa46bb444bb || https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 
 ### Notes for webdev mern
+
 - margin : top right bottom left
 - Getting chrome executable path: type -> chrome://version/ -> in chrome (for puppeteer)
-

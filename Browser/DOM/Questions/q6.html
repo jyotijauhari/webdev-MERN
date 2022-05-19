@@ -107,6 +107,34 @@
         <h3 class="heading">Example-10</h3>
         <p class="price" data-category="comedy">Rs 200</p>
     </div>
+
+    <script>
+
+        let select=document.querySelector("select");
+
+        select.addEventListener("change",function(){
+            let selectedValue=select.value;
+
+            let allTickets=document.querySelectorAll("p");
+            if(selectedValue=='all'){
+                for(let i=0;i<allTickets.length;i++){
+                    allTickets[i].style.display="block"
+                }
+            }
+            else{
+                for (let i = 0; i < allTickets.length; i++) {
+                    if(allTickets[i].getAttribute("data-category")!=selectedValue){
+                        //display nhi krni 
+                        allTickets[i].style.display = "none"
+                    }
+                    else{ //agar selectedValue ke equal h 
+                        allTickets[i].style.display = "block"
+                    }
+                }
+            }
+        })
+
+    </script>
 </body>
 
 </html>
