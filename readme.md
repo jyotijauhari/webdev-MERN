@@ -17,6 +17,8 @@
 - localstorage : https://javascript.info/localstorage
 - json - https://www.freecodecamp.org/news/json-stringify-example-how-to-parse-a-json-object-with-javascript/
 - higher order fun :  https://javascript.plainenglish.io/functional-programming-higher-order-function-hof-aaa46bb444bb || https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+- js objects: https://javascript.info/object
+- js datatypes: https://javascript.info/types
 
 ### Notes for webdev mern
 
