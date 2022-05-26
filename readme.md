@@ -19,6 +19,8 @@
 - higher order fun :  https://javascript.plainenglish.io/functional-programming-higher-order-function-hof-aaa46bb444bb || https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 - js objects: https://javascript.info/object
 - js datatypes: https://javascript.info/types
+- interview ques: https://blog.logrocket.com/how-browser-rendering-works-behind-scenes/
+- js object-copy: https://javascript.info/object-copy
 
 ### Notes for webdev mern
 
