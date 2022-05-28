@@ -21,6 +21,8 @@
 - js datatypes: https://javascript.info/types
 - interview ques: https://blog.logrocket.com/how-browser-rendering-works-behind-scenes/
 - js object-copy: https://javascript.info/object-copy
+- garbage collection: https://javascript.info/garbage-collection
+- this : https://javascript.info/object-methods
 
 ### Notes for webdev mern
 
