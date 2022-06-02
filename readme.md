@@ -23,6 +23,9 @@
 - js object-copy: https://javascript.info/object-copy
 - garbage collection: https://javascript.info/garbage-collection
 - this : https://javascript.info/object-methods
+- arrow function : https://javascript.info/arrow-functions-basics
+- optional chaining : https://javascript.info/optional-chaining
+- https://javascript.info/object-toprimitive
 
 ### Notes for webdev mern
 
