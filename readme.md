@@ -26,6 +26,8 @@
 - arrow function : https://javascript.info/arrow-functions-basics
 - optional chaining : https://javascript.info/optional-chaining
 - https://javascript.info/object-toprimitive
+- arrray: https://javascript.info/array-methods
+- array and object destructuring: https://javascript.info/destructuring-assignment
 
 ### Notes for webdev mern
 
