@@ -28,6 +28,7 @@
 - https://javascript.info/object-toprimitive
 - arrray: https://javascript.info/array-methods
 - array and object destructuring: https://javascript.info/destructuring-assignment
+- this in function vs arrow function : https://www.javascripttutorial.net/es6/when-you-should-not-use-arrow-functions/
 
 ### Notes for webdev mern
 
