@@ -30,6 +30,22 @@
 - array and object destructuring: https://javascript.info/destructuring-assignment
 - this in function vs arrow function : https://www.javascripttutorial.net/es6/when-you-should-not-use-arrow-functions/
 
+Camera media devices:
+
+https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices
+https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/enumerateDevices
+https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video
+https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement
+https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/srcObject
+https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder
+https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_usage
+https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL
+
+https://javascript.info/blob (URL.createobjectURL and blob)
+
+https://javascript.info/settimeout-setinterval
+
 ### Notes for webdev mern
 
 - margin : top right bottom left
