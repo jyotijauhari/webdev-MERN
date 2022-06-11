@@ -135,18 +135,15 @@ function stopTimer() {
     timer.style.display = 'none';
 }
 
-//filters add
-// let filterLayer = document.querySelector(".filter-layer");
-// let allfilters = document.querySelector(".filter");
 
-// allfilters.forEach()
+//filters add 
 
-// let filter1 = document.querySelector(".orange");
-// let filter2 = document.querySelector(".brown");
-// let filter3 = document.querySelector(".pink");
-// let filter4 = document.querySelector(".transparent");
+let filterLayer = document.querySelector(".filter-layer");
+let allFilters = document.querySelectorAll(".filter");
 
-
-// filter1.addEventListener("click", () => {
-//     video.fillStyle()
-// })
+allFilters.forEach((filterElem) => {
+    filterElem.addEventListener('click', () => {
+        transparentColor = getComputedStyle(filterElem).getPropertyValue('background-color');
+        filterLayer.style.backgroundColor = transparentColor;
+    })
+})
