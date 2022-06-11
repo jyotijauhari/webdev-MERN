@@ -99,7 +99,7 @@ video{
     background-color: #ffc0cb57;
 }
 
-.orange{
+.transparent{
     background-color:transparent;
 }
 
@@ -111,6 +111,38 @@ video{
     position: absolute;
     top: 0;
     left: 0;
+}
+
+.scale-capture{
+    animation-name: scale-capture;
+    animation-iteration-count: 1;
+    animation-duration: 0.5s;
+}
+
+@keyframes scale-capture {
+    0%{
+        transform: scale(0.8);
+    }
+
+    100%{
+        transform: scale(1.1);
+    }
+}
+
+.scale-record{
+    animation-name: scale-record;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+
+@keyframes scale-record {
+    0%{
+        transform: scale(0.8);
+    }
+
+    100%{
+        transform: scale(1.1);
+    }
 }
 
 .material-icons{
