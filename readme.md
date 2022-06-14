@@ -46,6 +46,8 @@ https://javascript.info/blob (URL.createobjectURL and blob)
 
 https://javascript.info/settimeout-setinterval
 
+indexdb : https://javascript.info/indexeddb
+
 ### Notes for webdev mern
 
 - margin : top right bottom left
