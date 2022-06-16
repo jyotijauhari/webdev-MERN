@@ -67,6 +67,18 @@ captureBtnCont.addEventListener("click", () => {
     // let img = document.createElement("img");
     // img.src = imageURL;
     // document.body.append(img);
+
+    if(db){
+        let imageId = uid();
+        let dbTransaction = db.transaction("image", "readonly");
+        let imageStore = dbTransaction.objectStore("image");
+        let imageEntry = {
+            id:imageId,
+            url:imageURL,
+        };
+        let 
+    }
+
     setTimeout(()=>{
         captureBtn.classList.remove("scale-capture");
     },510);
