@@ -1,3 +1,4 @@
+var uid = new ShortUniqueId();
 let video = document.querySelector("video");
 let captureBtnCont = document.querySelector(".capture-btn-cont");
 let captureBtn = document.querySelector(".capture-btn");
@@ -38,15 +39,27 @@ navigator.mediaDevices.getUserMedia(constraints)
         // download video on desktop
         let videoURL = URL.createObjectURL(blob);
         console.log(videoURL);
-
-        let a = document.createElement('a');
-        a.href = videoURL;
-        a.download = "myvideo.mp4";
-        a.click();
+        
+        // let a = document.createElement('a');
+        // a.href = videoURL;
+        // a.download = "myvideo.mp4";
+        // a.click();
         //store in database
+        if(db){
+            let videoId = uid();
+            let dbTransaction = db.transaction("video", "readwrite");
+            let videoStore = dbTransaction.objectStore("video");
+            let videoEntry = {
+                id: videoId,
+                url: videoURL,
+              };
+            
+        let addRequest = videoStore.add(videoEntry);
+        addRequest.onsuccess = () => {
+            console.log("video added to db successfully");
+        };
+        }
     })
-
-
 });
 
 //click photo
@@ -70,13 +83,16 @@ captureBtnCont.addEventListener("click", () => {
 
     if(db){
         let imageId = uid();
-        let dbTransaction = db.transaction("image", "readonly");
+        let dbTransaction = db.transaction("image", "readwrite");
         let imageStore = dbTransaction.objectStore("image");
         let imageEntry = {
             id:imageId,
             url:imageURL,
         };
-        let 
+        let addRequest=imageStore.add(imageEntry);
+        addRequest.onsuccess=() => {
+        console.log("image added to db successfully");   
+        } 
     }
 
     setTimeout(()=>{

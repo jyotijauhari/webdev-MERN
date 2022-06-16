@@ -1,7 +1,6 @@
 *{
     box-sizing: border-box;
 }
-
 body{
     margin: 0;
     padding: 0;
@@ -29,7 +28,6 @@ video{
     flex-direction: column;
     justify-content: space-around;
     z-index: 2;
-
 }
 
 .record-btn{
@@ -49,6 +47,7 @@ video{
     align-items: center;
 }
 
+
 .capture-btn{
     background-color: white;
     height: 3rem;
@@ -60,6 +59,7 @@ video{
     position: absolute;
     bottom:  10rem;
     color: white;
+     
     left: 3rem;
     z-index: 2;
 }
@@ -67,6 +67,7 @@ video{
 .timer{
     display:none;
 }
+
 
 .filter-cont{
     position: absolute;
