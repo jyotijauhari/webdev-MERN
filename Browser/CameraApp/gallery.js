@@ -25,6 +25,12 @@ setTimeout(()=>{
                 `;
 
                 galleryCont.appendChild(imageElem);
+
+                let deleteBtn = document.querySelector(".delete");
+                deleteBtn.addEventListener("click", deleteListener);
+
+                let downloadBtn = document.querySelector(".download");
+                downloadBtn.addEventListener("click", downloadListener);
             });
         };
             
@@ -55,13 +61,24 @@ setTimeout(()=>{
         `;
 
                 galleryCont.appendChild(videoElem);
+
+                let deleteBtn = document.querySelector(".delete");
+                deleteBtn.addEventListener("click", deleteListener);
+
+                let downloadBtn = document.querySelector(".download");
+                downloadBtn.addEventListener("click", downloadListener);
             });
         };
     }
 }, 100);
 
-        function deleteListener(){
+function deleteListener(e){
 
-        }
+    // let type = url.split(":")[1];//image or video
+    let id = e.target
+
+    }
         
-        function downloadListener() {}
+function downloadListener() {
+
+}

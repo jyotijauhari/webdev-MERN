@@ -30,6 +30,7 @@
 - array and object destructuring: https://javascript.info/destructuring-assignment
 - this in function vs arrow function : https://www.javascripttutorial.net/es6/when-you-should-not-use-arrow-functions/
 - html css practise : https://www.frontendmentor.io/
+- reduce func - https://dev.to/sanspanic/the-javascript-reduce-method-3j8l
 
 Camera media devices:
 

@@ -5,6 +5,8 @@ let captureBtn = document.querySelector(".capture-btn");
 let transparentColor = "transparent";
 let recordBtnCont = document.querySelector(".record-btn-cont");
 let recordBtn = document.querySelector(".record-btn");
+let gallery = document.querySelector(".gallery");
+gallery.addEventListener("on")
 
 let recorder;
 let chunks = [];
