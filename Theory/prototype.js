@@ -9,7 +9,7 @@ function abc(){
 console.log(arr.__proto__ );
 console.log(Array.prototype);
 
-//same op of these 3
+//same op of these  3
 console.log(arr.__proto__.__proto__);
 console.log(obj.__proto__);
 console.log(Object.prototype);
