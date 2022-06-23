@@ -31,6 +31,7 @@
 - this in function vs arrow function : https://www.javascripttutorial.net/es6/when-you-should-not-use-arrow-functions/
 - html css practise : https://www.frontendmentor.io/
 - reduce func - https://dev.to/sanspanic/the-javascript-reduce-method-3j8l
+- reduce,filter,map - https://dev.to/nehal_mahida/filter-map-and-reduce-in-js-when-and-where-to-use-281c
 - event loop jsconf youtube: [https://www.youtube.com/watch?v=8aGhZQkoFbQ](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
 
 Camera media devices:
