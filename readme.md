@@ -35,8 +35,10 @@
 - event loop jsconf youtube: [https://www.youtube.com/watch?v=8aGhZQkoFbQ](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
 - prototypal inheritance: https://javascript.info/prototype-inheritance
 - async defer : https://javascript.info/script-async-defer
+- [function-prototype:   https://javascript.info/function-prototype](https://javascript.info/function-prototype)
 - rest, spread: https://javascript.info/rest-parameters-spread
 - call,apply,bind : https://medium.com/@omergoldberg/javascript-call-apply-and-bind-e5c27301f7bb
+- [polyfills: https://javascript.info/polyfills](https://javascript.info/polyfills)
 
 Camera media devices:
 
