@@ -36,6 +36,7 @@
 - prototypal inheritance: https://javascript.info/prototype-inheritance
 - async defer : https://javascript.info/script-async-defer
 - rest, spread: https://javascript.info/rest-parameters-spread
+- call,apply,bind : https://medium.com/@omergoldberg/javascript-call-apply-and-bind-e5c27301f7bb
 
 Camera media devices:
 
