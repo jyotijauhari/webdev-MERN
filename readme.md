@@ -62,3 +62,9 @@ indexdb : https://javascript.info/indexeddb
 
 - margin : top right bottom left
 - Getting chrome executable path: type -> chrome://version/ -> in chrome (for puppeteer)
+- justify-content : help in aligning in row if ele in row, in col, if element in column
+- align-items: helps in aligning items with respect to whole container,                       
+-  - flex-start -> start of container                      
+-  - flex-end -> end of container                      
+-  - center -> center of container
+- flex-direction: help in changing the direction to row,col, row-reverse, column-reverse
