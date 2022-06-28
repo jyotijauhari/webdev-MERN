@@ -40,7 +40,12 @@
 - call,apply,bind : https://medium.com/@omergoldberg/javascript-call-apply-and-bind-e5c27301f7bb
 - [polyfills: https://javascript.info/polyfills](https://javascript.info/polyfills)
 
-Camera media devices:
+## React
+
+1. es6 this : https://www.freecodecamp.org/news/learn-es6-the-dope-way-part-ii-arrow-functions-and-the-this-keyword-381ac7a32881/
+
+
+#### Camera media devices:
 
 https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices
 https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/enumerateDevices
@@ -63,8 +68,8 @@ indexdb : https://javascript.info/indexeddb
 - margin : top right bottom left
 - Getting chrome executable path: type -> chrome://version/ -> in chrome (for puppeteer)
 - justify-content : help in aligning in row if ele in row, in col, if element in column
-- align-items: helps in aligning items with respect to whole container,                       
--  - flex-start -> start of container                      
--  - flex-end -> end of container                      
--  - center -> center of container
+- align-items: helps in aligning items with respect to whole container,                      
+- - flex-start -> start of container                     
+- - flex-end -> end of container                     
+- - center -> center of container
 - flex-direction: help in changing the direction to row,col, row-reverse, column-reverse
