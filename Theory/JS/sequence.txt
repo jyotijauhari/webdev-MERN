@@ -1,0 +1,15 @@
+this ques
+
+hof - map 
+
+prototype and prototypal inheritance
+
+call apply bind
+
+strings.js
+reactbasics
+temp.js 
+oop
+destructuring
+spread rest
+react project in React folder
