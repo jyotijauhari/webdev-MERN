@@ -44,7 +44,6 @@
 
 1. es6 this : https://www.freecodecamp.org/news/learn-es6-the-dope-way-part-ii-arrow-functions-and-the-this-keyword-381ac7a32881/
 
-
 #### Camera media devices:
 
 https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices
@@ -62,6 +61,11 @@ https://javascript.info/blob (URL.createobjectURL and blob)
 https://javascript.info/settimeout-setinterval
 
 indexdb : https://javascript.info/indexeddb
+
+#### React:
+
+* https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi
+* 
 
 ### Notes for webdev mern
 
