@@ -77,3 +77,8 @@ indexdb : https://javascript.info/indexeddb
 - - flex-end -> end of container                     
 - - center -> center of container
 - flex-direction: help in changing the direction to row,col, row-reverse, column-reverse
+
+
+----
+
+JS : https://docs.google.com/document/d/1b0fF6cfHZrq5qyp8lbaFS5Twubi9K8DePlYhN5ZFJuM/edit?usp=sharing
