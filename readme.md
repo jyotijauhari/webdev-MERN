@@ -65,8 +65,10 @@ indexdb : https://javascript.info/indexeddb
 #### React:
 
 1. https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi
-2. axios : https://www.npmjs.com/package/axios
-3. moviedb : https://developers.themoviedb.org/3/getting-started/introduction
+2. moviedb : https://developers.themoviedb.org/3/getting-started/introduction
+3. movie db acc signup/login : https://www.themoviedb.org/login
+4. axios : https://www.npmjs.com/package/axios
+
 
 ### Notes for webdev mern
 
