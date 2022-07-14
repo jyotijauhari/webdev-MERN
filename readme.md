@@ -64,8 +64,9 @@ indexdb : https://javascript.info/indexeddb
 
 #### React:
 
-* https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi
-* 
+1. https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi
+2. axios : https://www.npmjs.com/package/axios
+3. moviedb : https://developers.themoviedb.org/3/getting-started/introduction
 
 ### Notes for webdev mern
 
