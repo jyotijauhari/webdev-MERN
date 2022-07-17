@@ -10,6 +10,39 @@
     <title>Counter app</title>
 </head>
 <body>
-    
+    <div id="root"></div> 
 </body>
+<script type="text/babel">
+    class Counter extends React.Component{
+        constructor(){
+            super(); //gives this of this class
+            this.state = {
+                count:0
+            }
+        }
+
+        increment = () => {
+            this.setState({
+                count:this.state.count+1
+            })
+        }
+
+        decrement = () => {
+            this.setState({
+                count:this.state.count>0?this.state.count-1:0
+            })
+        }
+
+        render(){
+            return (
+                <div>
+                    <h1>{this.state.count}</h1>
+                    <button onClick={this.increment}>+</button>
+                    <button onClick={this.decrement}>-</button>
+                </div>
+            )
+        }
+    }
+    ReactDOM.render(<Counter/>, document.getElementById('root'));
+  </script>
 </html>
