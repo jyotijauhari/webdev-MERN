@@ -64,8 +64,11 @@ indexdb : https://javascript.info/indexeddb
 
 #### React:
 
-* https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi
-* 
+1. https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi
+2. moviedb : https://developers.themoviedb.org/3/getting-started/introduction
+3. movie db acc signup/login : https://www.themoviedb.org/login
+4. axios : https://www.npmjs.com/package/axios
+
 
 ### Notes for webdev mern
 
@@ -77,3 +80,8 @@ indexdb : https://javascript.info/indexeddb
 - - flex-end -> end of container                     
 - - center -> center of container
 - flex-direction: help in changing the direction to row,col, row-reverse, column-reverse
+
+
+----
+
+JS : https://docs.google.com/document/d/1b0fF6cfHZrq5qyp8lbaFS5Twubi9K8DePlYhN5ZFJuM/edit?usp=sharing
