@@ -28,11 +28,65 @@
   color: #61dafb;
 }
 
+.banner-card{
+  width: 100vw;
+  margin-top: 1vh;
+  height: 70vh;
+  color: rgb(253, 251, 251);
+  /* background-color: yellowgreen; */
+  position: relative;
+}
+
+.banner-img{
+  width: 100vw;
+  height: 70vh;
+}
+
+.banner-title{
+  position: absolute;
+  top: 45vh;
+  /* color: #/282c34; */
+}
+
+.banner-desc{
+  position: absolute;
+  top:50vh;
+  height: 4.5rem;
+  overflow: hidden;
+}
+
+.movies-list{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  justify-content: center;
+}
+
+.movies-card{
+ 
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+
+@media screen and (max-width:400px){
+  .banner-card{
+    height: 30vh;
+  }
+  .banner-img{
+    height: 30vh;
+  }
+  .banner-title{
+    top: 12vh;
+  }
+  .banner-desc{
+    top: 15vh; 
   }
 }
