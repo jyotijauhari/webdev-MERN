@@ -1,21 +1,39 @@
 import React, { Component } from 'react'
 import { movies } from './getMovies'
+import axios from 'axios';
+let apikey = require("./apikey");
 
 export default class Movies extends Component {
   constructor(){
     super();
     this.state = {
       hover:'',
-      parr : [1]
+      parr : [1],
+      currPage : 1,
+      movies : []
     }
-  }  
+  } 
+  
+  async componentDidMount(){
+    const res = await axios.get(`https://api.themoviedb.org/3/trending/all/day?api_key=${apikey}&page=${this.state.currPage}`)
+    let data = res.data;
+    console.log(data);
+    this.setState({
+      movies : [...data.results]
+    })
+    
+    console.log("mounting done");
+    console.log(this.state.movies);
+  }
   
   render() {
-    let movie = movies.results;
+    console.log("render");
+    console.log(apikey);
+    // let movie = movies.results;
     return (
       <>
       {
-        movie.length==0?
+        this.state.movies.length==0?
         <div class="spinner-border text-primary" role="status">
           <span class="sr-only"></span>
         </div>:
@@ -23,7 +41,7 @@ export default class Movies extends Component {
             <h3><strong>Trending</strong></h3>
             <div className='movies-list'>
                 {
-                    movie.map((movieObj)=>(
+                    this.state.movies.map((movieObj)=>(
                         <div className="card movies-card" onMouseEnter={()=>this.setState({hover:movieObj.id})} onMouseLeave={()=>this.setState({hover:''})}>
                         <img src={`https://image.tmdb.org/t/p/original${movieObj.backdrop_path}`} alt="Card image cap" className='card-img-top movies-img'/>
                             <h5 className="card-title movies-title">{movieObj.original_title}</h5>
