@@ -25,6 +25,47 @@ export default class Movies extends Component {
     console.log("mounting done");
     console.log(this.state.movies);
   }
+
+  changeMovies = async () => {
+    const res = await axios.get(`https://api.themoviedb.org/3/trending/all/day?api_key=${apikey}&page=${this.state.currPage}`)
+    let data = res.data;
+    this.setState({
+      movies : [...data.results]
+    })
+  }
+
+  handleRight = () => {
+    let temparr = [];
+    for(let i=1; i<=this.state.parr.length+1; i++){
+      temparr.push(i);
+    }
+    this.setState({
+      parr:[...temparr],
+      currPage: this.state.currPage+1
+    },this.changeMovies);
+  }
+
+  handleLeft = () => {
+    let temparr = [];
+    if(this.state.currPage==1){
+      return;
+    }
+    for(let i=1; i<=this.state.parr.length-1; i++){
+      temparr.push(i);
+    }
+    this.setState({
+      parr:[...temparr],
+      currPage: this.state.currPage-1
+    },this.changeMovies);
+  }
+
+  handleClick = (pageno) => {
+    if(pageno != this.state.currPage){
+      this.setState({
+        currPage : pageno
+      }, this.changeMovies)
+    }
+  }
   
   render() {
     console.log("render");
@@ -60,13 +101,13 @@ export default class Movies extends Component {
       <div style={{display:'flex', justifyContent:'center'}}>
         <nav aria-label="Page navigation example">
           <ul class="pagination">
-            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item"><a class="page-link" onClick={this.handleLeft}>Previous</a></li>
             {
               this.state.parr.map((pageno)=>(
-                <li class="page-item"><a class="page-link" href="#">{pageno}</a></li>
+                <li class="page-item"><a class="page-link" onClick={()=>this.handleClick(pageno)}>{pageno}</a></li>
               ))
             }
-            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            <li class="page-item"><a class="page-link" onClick = {this.handleRight}>Next</a></li>
           </ul>
         </nav>
       </div>
