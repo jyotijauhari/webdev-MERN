@@ -28,44 +28,6 @@
   color: #61dafb;
 }
 
-.banner-card{
-  width: 100vw;
-  margin-top: 1vh;
-  height: 70vh;
-  color: rgb(253, 251, 251);
-  /* background-color: yellowgreen; */
-  position: relative;
-}
-
-.banner-img{
-  width: 100vw;
-  height: 70vh;
-}
-
-.banner-title{
-  position: absolute;
-  top: 45vh;
-  /* color: #/282c34; */
-}
-
-.banner-desc{
-  position: absolute;
-  top:50vh;
-  height: 4.5rem;
-  overflow: hidden;
-}
-
-.movies-list{
-  display: flex;
-  flex-wrap: wrap;
-  padding: 1rem;
-  justify-content: center;
-}
-
-.movies-card{
- 
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -75,6 +37,65 @@
   }
 }
 
+.banner-card{
+  width: 100vw;
+  margin-top: 1vh;
+  margin-bottom: 3vh;
+  position: relative;
+  height: 70vh;
+  color: white;
+}
+
+.banner-img{
+height: 70vh;
+width: 100%;
+}
+
+.banner-title{
+position: absolute;
+top: 45vh;
+left: 5vw;
+}
+
+.banner-text{
+position: absolute;
+top: 55vh;
+left: 5vw;
+height: 4.5rem;
+overflow: hidden;
+margin-right: 5vw;
+}
+
+.movies-list{
+display: flex;
+flex-wrap: wrap;
+padding: 1rem;
+justify-content: center;
+}
+
+.movies-card{
+width: 20vw;
+margin: 1rem;
+color: white;
+position: relative;
+}
+
+.movies-title{
+position: absolute;
+top: 1rem;
+left: 1rem;
+
+}
+
+.movies-button{
+position: absolute;
+bottom: 2rem;
+}
+
+.movies-img{
+height: 40vh;
+width: 20vw;
+}
 
 @media screen and (max-width:400px){
   .banner-card{

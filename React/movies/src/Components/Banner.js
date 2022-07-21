@@ -18,11 +18,11 @@ export default class Banner extends Component {
           <img className="banner-img" src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt="Card image cap"/>
           <div className="card-body">
             <h5 className="card-title banner-title">{movie.original_title}</h5>
-            <p className="card-text banner-desc">{movie.overview}</p>
+            <p className="card-text banner-text">{movie.overview}</p>
           </div>
         </div>
-
       }
+      
       </>
       
     )
